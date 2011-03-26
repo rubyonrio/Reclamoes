@@ -1,0 +1,16 @@
+
+<table>
+	<tr>
+		<th>User</th>
+		<th>Description</th>
+		<th>Date</th>				
+	</tr>
+<% tweets.each do |t| %>
+	<tr>
+		<td><%= t.user %></td>
+		<td><%= t.description %></td>
+		<td><%= t.date %></td>				
+	</tr>
+<% end %>
+
+<table>
