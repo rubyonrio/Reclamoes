@@ -1,4 +1,8 @@
 Reclamoes::Application.routes.draw do
+  
+  match "/auth/facebook/callback" => "sessions#create"
+  get "sessions/destroy"
+
   resources :reclamacaos
 
   # The priority is based upon order of creation:
