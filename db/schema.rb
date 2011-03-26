@@ -12,19 +12,18 @@
 
 ActiveRecord::Schema.define(:version => 20110326204018) do
 
-  create_table "users", :force => true do |t|
-    t.string   "uid"
-  end
-end
-
-ActiveRecord::Schema.define(:version => 20110326195836) do
-
   create_table "reclamacaos", :force => true do |t|
     t.string   "titulo"
     t.text     "descricao"
     t.string   "tipo"
     t.integer  "usuario_id"
     t.string   "empresa"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
