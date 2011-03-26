@@ -1,4 +1,6 @@
 Reclamoes::Application.routes.draw do
+  resources :reclamacaos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

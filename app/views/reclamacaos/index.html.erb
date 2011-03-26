@@ -1,0 +1,31 @@
+<h1>Listing reclamacaos</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Descricao</th>
+    <th>Tipo</th>
+    <th>Usuario</th>
+    <th>Empresa</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reclamacaos.each do |reclamacao| %>
+  <tr>
+    <td><%= reclamacao.titulo %></td>
+    <td><%= reclamacao.descricao %></td>
+    <td><%= reclamacao.tipo %></td>
+    <td><%= reclamacao.usuario_id %></td>
+    <td><%= reclamacao.empresa %></td>
+    <td><%= link_to 'Show', reclamacao %></td>
+    <td><%= link_to 'Edit', edit_reclamacao_path(reclamacao) %></td>
+    <td><%= link_to 'Destroy', reclamacao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reclamacao', new_reclamacao_path %>

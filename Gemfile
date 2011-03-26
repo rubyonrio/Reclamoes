@@ -1,11 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3'
+gem 'jquery-rails', '>= 0.2.6'
 
 gem 'twitter'
 
@@ -31,3 +28,6 @@ gem 'twitter'
 # group :development, :test do
 #   gem 'webrat'
 # end
+group :development, :test do
+   gem 'rspec-rails'
+end

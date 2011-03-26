@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @reclamacao.titulo %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @reclamacao.descricao %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @reclamacao.tipo %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @reclamacao.usuario_id %>
+</p>
+
+<p>
+  <b>Empresa:</b>
+  <%= @reclamacao.empresa %>
+</p>
+
+
+<%= link_to 'Edit', edit_reclamacao_path(@reclamacao) %> |
+<%= link_to 'Back', reclamacaos_path %>
