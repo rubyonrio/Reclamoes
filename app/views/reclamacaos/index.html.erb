@@ -1,31 +1,40 @@
-<h1>Listing reclamacaos</h1>
+<div class="container">
 
-<table>
-  <tr>
-    <th>Titulo</th>
-    <th>Descricao</th>
-    <th>Tipo</th>
-    <th>Usuario</th>
-    <th>Empresa</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="header">
 
-<% @reclamacaos.each do |reclamacao| %>
-  <tr>
-    <td><%= reclamacao.titulo %></td>
-    <td><%= reclamacao.descricao %></td>
-    <td><%= reclamacao.tipo %></td>
-    <td><%= reclamacao.usuario_id %></td>
-    <td><%= reclamacao.empresa %></td>
-    <td><%= link_to 'Show', reclamacao %></td>
-    <td><%= link_to 'Edit', edit_reclamacao_path(reclamacao) %></td>
-    <td><%= link_to 'Destroy', reclamacao, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <h1>Logo dos Reclamoes</h1>
 
-<br />
+    <ul class="menu-principal">
+      <li><a href="#" title="Top 10 Reclamações">Top 10</a></li>
+      <li><a href="#" title="Categorias de reclamações">Reclamações</a></li>
+      <li><a href="#" title="Sobre">Sobre</a>
+      <li><a href="#" title="Contato">Contato</a>
+    </ul><!-- .menu-principal -->
 
-<%= link_to 'New Reclamacao', new_reclamacao_path %>
+</div><!-- #header -->
+
+  <form>
+    <p>Aqui entra um botao para abrir o form de cadastro de reclamacao</p>
+  </form>
+  
+  <ul class="reclamacoes">
+  
+    <% @reclamacaos.each do |reclamacao| %>
+      <li>
+        <h2><%= reclamacao.titulo %></h2>
+        <p><%= reclamacao.tipo %> - <%= reclamacao.empresa %></p>
+        <p class="descricao"><%= reclamacao.descricao %></p><!-- .descricao -->
+        <p class="votar">Botao de votar</p><!-- .votar -->
+        <p class="autor">Autor: <%= reclamacao.usuario_id %></p><!-- .autor --> 
+        
+        <p><%= link_to 'Show', reclamacao %> - <%= link_to 'Edit', edit_reclamacao_path(reclamacao) %> - <%= link_to 'Destroy', reclamacao, :confirm => 'Are you sure?', :method => :delete %></p>
+      </li>
+    <% end %>
+    
+  </ul><!-- .reclamacoes -->
+
+  <br />
+
+  <%= link_to 'New Reclamacao', new_reclamacao_path %>
+
+</div><!-- .container -->
